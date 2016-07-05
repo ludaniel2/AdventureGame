@@ -1,0 +1,8 @@
+class Disagree(Scene):
+
+	def enter(self):
+		print "You disagree to all with Raynor."
+		print "Bad choice! As you send your void rays to attack the hive cluster, an army of burrowed hydralisks and zerglings stealthily creep to your base."
+		print "They wipe out every last probe and structure, leaving you left to witness the destruction."
+		print "After, they kill you."
+		return "death"

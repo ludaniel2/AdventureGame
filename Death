@@ -1,0 +1,12 @@
+class Death(Scene):
+    
+    death_quotes = [
+        "You just died. Learn to get better."
+        "Congratulations! You just died. Try again."
+        "How did you manage to die? Think wisely."
+    ]
+
+    def enter(self):
+    	print Death.death_quotes[randint(0, len(self.death_quotes)-1]
+        exit(1)
+        

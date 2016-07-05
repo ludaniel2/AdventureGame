@@ -1,0 +1,39 @@
+class MainRoom(Scene):
+
+	def enter(self):
+		print "Your name is Tassadar, leader of the Protoss race!"
+		print "Your homeland has been attacked by the Zerg race, and it is your job to stop them from taking over your homeland."
+		print "With your will and might, you can save your people and your home."
+		print "However, you must make wise decisions or else you and your people will die."
+		print "\n"
+		print "You control: \n\t*24 probes\n\t*4 zealots\n\t*3 stalkers\n"
+		print "The Zerg first swarm your outer core's photon cannons. What would you like to do?"
+		print "\n"
+		print "A. Send 3 of your zealots to fend off the incoming zerglings."
+		print "B. Try to negotiate with Kerrigan to make peace."
+		print "C. Surrender."
+
+		first_step = raw_input("> ")
+
+		if first_step == "A":
+			print "Congratulations! Your zealots sucessfully slash away at the zerglings and kill them all."
+			print "Kerrigan becomes more agitated, however you have not died and your home still remains."
+			print "Her last attack was very costly. You are now on the offense!"
+			return "first_offense"
+
+		elif first_step == "B":
+			print "As you go to make negotiations with Kerrigan, an enemy hydralisk shoots its acidic goo onto you."
+			print "You start to burn up and dissolve."
+			return "death"
+
+		elif first_step == "C":
+			print "You send a white flag showing that you plan on surrendering."
+			print "Kerrigan does not accept surrenders and instead rallys her whole swarm to focus on your settlement."
+			print "She kills off your troops and every last probe. She taunts you and kills you last so you can watch your home burn away."
+			return "death"
+
+		else:
+			print "I do not understand your input."
+			print "Please respond with 'A', 'B', or 'C'."
+			return "main_room"
+

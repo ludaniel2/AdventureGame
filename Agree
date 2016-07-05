@@ -1,0 +1,27 @@
+class Agree(Scene):
+
+	def enter(self):
+		print "So you agree to ally with Raynor."
+		print "Good choice. He sends over an army of medivacs, marines, and marauders."
+		print "Your void rays and his army wipe out the hive cluster."
+		print "Your next step is to find Kerrigan. If you take out Kerrigan, the Zerg will clash within and fall."
+		print "You know she is hiding somewhere inside the main hive."
+		print "You now have a large army, and send it to the main hive."
+		print "There are two hatcheries here. Each is in its own section." 
+		print "You only have time to attack one hatchery. You must choose the one Kerrigan is in or you will fail and get flanked by enemy units."
+    	print "Which one do you take?"
+    	print "A. 1"
+    	print "B. 2"
+    	
+    	hatchery = randint(1,2)
+    	guess = raw_input("Hatchery #: ")
+
+    	if int(guess) != hatchery:
+    		print "You have chosen the wrong hatchery."
+    		print "The other hatchery sends troops to flank, and all of your and Raynor's troops die."
+    		return "death"
+    	else:
+    		print "You have chosen the right one! Your void rays obliterate every last creature in sight."
+    		print "Kerrigan is the last one remaining, and you kill her yourself."
+    		print "Enemy Zerg are now fighting each other, leaving the Zerg to fall and you victorious."
+    	    return "finished"
